@@ -1,0 +1,65 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "925bbec4269294a09b38b369127b3673",
+    "packages": [
+        {
+            "name": "ketut/random-string",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ketut-angga/random-string.git",
+                "reference": "93ac574a8c88e2777543c6e2abcc916523452663"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ketut-angga/random-string/zipball/93ac574a8c88e2777543c6e2abcc916523452663",
+                "reference": "93ac574a8c88e2777543c6e2abcc916523452663",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ketut\\RandomString\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ketut-angga",
+                    "email": "anggapande45@gmail.com"
+                }
+            ],
+            "description": "Generate random string",
+            "support": {
+                "issues": "https://github.com/ketut-angga/random-string/issues",
+                "source": "https://github.com/ketut-angga/random-string/tree/v1.0.0"
+            },
+            "time": "2023-04-04T05:58:33+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}

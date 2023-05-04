@@ -1,0 +1,69 @@
+#wp-logbook {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 5rem;
+}
+
+.wp-logbook.wrapper {
+  width: 50%;
+}
+
+.wp-logbook.wrapper > .logo {
+  display: flex;
+  justify-content: center;
+}
+
+.wp-logbook .logo img {
+  width: 5rem;
+}
+
+.wp-logbook-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px;
+}
+
+.wp-logbook-title a {
+  color: #15af19;
+  text-decoration: none;
+}
+
+.wp-logbook-title a:hover {
+  color: #128c16;
+}
+
+.wp-logbook-title h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.wp-logbook-title p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.wp-logbook-input-box {
+  line-height: 2rem;
+}
+
+.wp-logbook-input-box input {
+  width: 100%;
+}
+
+.wp-logbook-card {
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 4rem;
+  margin-top: 3rem;
+}
+
+p.submit {
+  text-align: right;
+}
+
+p.submit input {
+  background-color: #15af19 !important;
+  border-color: #15af19 !important;
+}

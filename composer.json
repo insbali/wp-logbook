@@ -1,0 +1,21 @@
+{
+    "name": "solvrtech/wp-logbook",
+    "description": "Monitoring log files",
+    "type": "library",
+    "license": "GPL 2 or later",
+    "autoload": {
+        "psr-4": {
+            "Solvrtech\\WPlogbook\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "solvrtech",
+            "email": "info@solvrtech.id"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "ketut/random-string": "^1.0@dev"
+    }
+}
