@@ -2,6 +2,10 @@
 
 namespace Solvrtech\WPlogbook;
 
+if (!defined("ABSPATH")) {
+    exit;
+}
+
 class Deactivation
 {
 

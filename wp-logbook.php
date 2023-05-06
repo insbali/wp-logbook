@@ -23,6 +23,7 @@ if (!defined("ABSPATH")) {
 
 define("WP_LOGBOOK_URL", plugin_dir_url(__FILE__));
 define("WP_LOGBOOK_PATH", plugin_dir_path(__FILE__));
+define("WP_LOGBOOK_ROOT", __FILE__);
 
 if (file_exists(dirname(__FILE__) . '/vendor/autoload.php')) {
     require_once dirname(__FILE__) . '/vendor/autoload.php';

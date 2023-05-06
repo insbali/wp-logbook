@@ -2,6 +2,10 @@
 
 namespace Solvrtech\WPlogbook\Service;
 
+if (!defined("ABSPATH")) {
+    exit;
+}
+
 use DateTime;
 
 class HealthService

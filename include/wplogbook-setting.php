@@ -23,8 +23,50 @@
                 </div>
 
                 <div class="wp-logbook-input-box">
-                    <label for="wp_logbook_api_key"><?= __("Min log level", 'wp-logbook') ?></label>
-                    <input type="text" id="wp_logbook_log_level" name="wp_logbook_log_level" value="<?= get_option('wp_logbook_log_level') !== null ? get_option('wp_logbook_log_level') : '' ?>">
+                    <label for="wp_logbook_log_level"><?= __("Min log level", 'wp-logbook') ?></label>
+                    <select name="wp_logbook_log_level" id="wp_logbook_log_level">
+                        <?php
+                        $levels = [
+                            [
+                                "level" => "DEBUG",
+                                "value" => 0
+                            ],
+                            [
+                                "level" => "INFO",
+                                "value" => 1
+                            ],
+                            [
+                                "level" => "NOTICE",
+                                "value" => 2
+                            ],
+                            [
+                                "level" => "WARNING",
+                                "value" => 3
+                            ],
+                            [
+                                "level" => "ERROR",
+                                "value" => 4
+                            ],
+                            [
+                                "level" => "CRITICAL",
+                                "value" => 5
+                            ],
+                            [
+                                "level" => "ALERT",
+                                "value" => 6
+                            ],
+                            [
+                                "level" => "EMERGENCY",
+                                "value" => 7
+                            ],
+                        ];
+                        foreach ($levels as $level) :
+                        ?>
+                            <option value="<?= $level['value'] ?>" <?= get_option("wp_logbook_log_level") == $level["value"] ? "selected" : "" ?> class="">
+                                <?= $level['level'] ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
                 </div>
 
                 <?= submit_button(__("Save Change", "wp-logbook")) ?>

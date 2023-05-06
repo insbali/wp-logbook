@@ -8,6 +8,7 @@ if (!defined("ABSPATH")) {
 
 use Solvrtech\WPlogbook\Admin\AdminSetting;
 use Solvrtech\WPlogbook\Controller\HealthController;
+use Solvrtech\WPlogbook\Controller\LogsController;
 
 final class Init
 {
@@ -17,6 +18,7 @@ final class Init
         return [
             AdminSetting::class,
             HealthController::class,
+            LogsController::class,
         ];
     }
 

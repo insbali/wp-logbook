@@ -52,6 +52,11 @@
   width: 100%;
 }
 
+.wp-logbook-input-box select {
+  max-width: 100%;
+  width: 100%;
+}
+
 .wp-logbook-card {
   border-radius: 5px;
   background-color: #fff;
