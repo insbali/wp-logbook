@@ -34,7 +34,7 @@ class MemoryCheck
         return $health_model->set_key(self::get_key());
     }
 
-    private static function check(): int
+    private static function check(): float|int
     {
         return round(memory_get_usage() / 1048576, 2);
     }

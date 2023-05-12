@@ -31,6 +31,7 @@ class HealthService
 
         return [
             "datetime" => (new DateTime())->format("Y-m-d H:i:s"),
+            "instanceID" => get_option("wp_logbook_config")["instance_id"],
             "checks" => $checks,
         ];
     }

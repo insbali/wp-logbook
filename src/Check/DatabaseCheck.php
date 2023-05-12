@@ -28,7 +28,7 @@ class DatabaseCheck
             $health_model->set_status(HealthCheckModel::OK)
                 ->set_meta([
                     "databaseSize" => [
-                        "mysql" => $db_size
+                        "default" => $db_size
                     ],
                     "unit" => "Mb"
                 ]);

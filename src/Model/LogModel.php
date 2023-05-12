@@ -5,14 +5,14 @@ namespace Solvrtech\WPlogbook\Model;
 class LogModel
 {
 
-    public const DEBUG = "DEBUG";
-    public const INFO = "INFO";
-    public const NOTICE = "NOTICE";
-    public const WARNING = "WARNING";
-    public const ERROR = "ERROR";
-    public const CRITICAL = "CRITICAL";
-    public const ALERT = "ALERT";
-    public const EMERGENCY = "EMERGENCY";
+    public const DEBUG = ["LEVEL" => "DEBUG", "CODE" => 100];
+    public const INFO = ["LEVEL" => "INFO", "CODE" => 200];
+    public const NOTICE = ["LEVEL" => "NOTICE", "CODE" => 250];
+    public const WARNING = ["LEVEL" => "WARNING", "CODE" => 300];
+    public const ERROR = ["LEVEL" => "ERROR", "CODE" => 400];
+    public const CRITICAL = ["LEVEL" => "CRITICAL", "CODE" => 500];
+    public const ALERT = ["LEVEL" => "ALERT", "CODE" => 550];
+    public const EMERGENCY = ["LEVEL" => "EMERGENCY", "CODE" => 600];
 
     public ?string $message = null;
     public ?string $file = null;
@@ -22,6 +22,7 @@ class LogModel
     public ?string $channel = null;
     public ?string $datetime = null;
     public ?array $additional = array();
+    public ?ClientModel $client = null;
 
     public function getMessage(): string
     {
@@ -108,6 +109,17 @@ class LogModel
     public function setAdditional(?array $additional): self
     {
         $this->additional = $additional;
+        return $this;
+    }
+
+    public function getClient(): ClientModel
+    {
+        return $this->client;
+    }
+
+    public function setClient(?ClientModel $client): self
+    {
+        $this->client = $client;
         return $this;
     }
 }

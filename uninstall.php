@@ -8,9 +8,10 @@ register_uninstall_hook(__FILE__, "wp_logbook_plugin_uninstall");
 function wp_logbook_plugin_uninstall()
 {
     $options = array(
-        'wp_logbook_api_key',
-        'wp_logbook_api_url',
-        'wp_logbook_log_level',
+        'wp_logbook_config',
+        'wp_logbook_status',
+        'wp_logbook_log_path',
+        'wp_logbook_log_schedule',
     );
 
     foreach ($options as $option)

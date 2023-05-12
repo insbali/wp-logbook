@@ -16,6 +16,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "ketut/random-string": "^1.0@dev"
+        "ketut/random-string": "^1.0@dev",
+        "wp-cli/wp-config-transformer": "dev-main"
     }
 }

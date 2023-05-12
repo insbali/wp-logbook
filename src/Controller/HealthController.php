@@ -24,7 +24,7 @@ class HealthController
                 "methods" => "GET",
                 "callback" => array($this, "health_check_data"),
                 "permission_callback" => function ($requests) {
-                    if ($requests->get_header('x_logbook_key') !== get_option('wp_logbook_api_key'))
+                    if ($requests->get_header('x_logbook_key') !== get_option('wp_logbook_config')['api_key'])
                         return false;
 
                     return true;

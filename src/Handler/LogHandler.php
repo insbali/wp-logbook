@@ -10,21 +10,21 @@ class LogHandler
     public function send_log(LogModel $log)
     {
         try {
-
             if (!function_exists('get_plugin_data')) {
                 require_once(ABSPATH . 'wp-admin/includes/plugin.php');
             }
 
             if ($this->getMinLevel() <= $this->intLevel($log->level)) {
                 wp_remote_post(
-                    get_option("wp_logbook_api_url") . '/api/log/save',
+                    get_option("wp_logbook_config")["api_url"] . '/api/log/save',
                     array(
                         "method" => "POST",
                         "headers" => array(
                             "Content-Type"  => "application/json",
-                            "Accept"        => "aplication/json",
-                            "x-lb-token"    => get_option("wp_logbook_api_key"),
-                            "x-lb-version"  => get_plugin_data(WP_LOGBOOK_ROOT)['Version']
+                            "Accept"        => "application/json",
+                            "x-lb-token"    => get_option("wp_logbook_config")["api_key"],
+                            "x-lb-version"  => get_plugin_data(WP_LOGBOOK_ROOT)['Version'],
+                            "x-lb-instance-id" => get_option("wp_logbook_config")["instance_id"],
                         ),
                         "body" => json_encode($log)
                     )
@@ -36,7 +36,7 @@ class LogHandler
 
     private function getMinLevel()
     {
-        return get_option("wp_logbook_log_level");
+        return get_option("wp_logbook_config")["log_level"];
     }
 
     private function intLevel($level)

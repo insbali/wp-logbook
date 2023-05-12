@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "925bbec4269294a09b38b369127b3673",
+    "content-hash": "c564b45436fed32b286aafbf64b63f80",
     "packages": [
         {
             "name": "ketut/random-string",
@@ -51,12 +51,59 @@
                 "source": "https://github.com/ketut-angga/random-string/tree/v1.0.0"
             },
             "time": "2023-04-04T05:58:33+00:00"
+        },
+        {
+            "name": "wp-cli/wp-config-transformer",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-cli/wp-config-transformer.git",
+                "reference": "b1a6a013e4a8c74b29ba185368b78a140b3268da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-cli/wp-config-transformer/zipball/b1a6a013e4a8c74b29ba185368b78a140b3268da",
+                "reference": "b1a6a013e4a8c74b29ba185368b78a140b3268da",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "wp-cli/wp-cli-tests": "^3.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/WPConfigTransformer.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frankie Jarrett",
+                    "email": "fjarrett@gmail.com"
+                }
+            ],
+            "description": "Programmatically edit a wp-config.php file.",
+            "homepage": "https://github.com/wp-cli/wp-config-transformer",
+            "support": {
+                "issues": "https://github.com/wp-cli/wp-config-transformer/issues",
+                "source": "https://github.com/wp-cli/wp-config-transformer/tree/v1.3.3"
+            },
+            "time": "2023-04-26T19:51:31+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "ketut/random-string": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

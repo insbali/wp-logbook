@@ -24,6 +24,7 @@ if (!defined("ABSPATH")) {
 define("WP_LOGBOOK_URL", plugin_dir_url(__FILE__));
 define("WP_LOGBOOK_PATH", plugin_dir_path(__FILE__));
 define("WP_LOGBOOK_ROOT", __FILE__);
+define("WP_LOGBOOK_BASENAME", plugin_basename(__FILE__));
 
 if (file_exists(dirname(__FILE__) . '/vendor/autoload.php')) {
     require_once dirname(__FILE__) . '/vendor/autoload.php';
@@ -35,7 +36,7 @@ function wp_logbook_plugin_activation()
     Solvrtech\WPlogbook\Activation::plugin_activate();
 }
 
-register_activation_hook(__FILE__, 'wp_logbook_plugin_deactivation');
+register_deactivation_hook(__FILE__, 'wp_logbook_plugin_deactivation');
 function wp_logbook_plugin_deactivation()
 {
     Solvrtech\WPlogbook\Deactivation::plugin_deactivate();

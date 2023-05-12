@@ -1,74 +1,62 @@
-#wp-logbook {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding-top: 5rem;
+.wpl_switch {
+  min-width: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  visibility: hidden;
+  margin: 0 !important;
+  -webkit-appearance: auto !important;
 }
 
-.wp-logbook.wrapper {
-  width: 50%;
+.wpl_switch_label {
+  content: "Disable";
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 55px;
+  height: 25px;
+  background: grey;
+  display: inline-block;
+  border-radius: 100px;
+  position: relative;
 }
 
-.wp-logbook.wrapper > .logo {
-  display: flex;
-  justify-content: center;
+.wpl_switch_label:after {
+  content: "Enable";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
 }
 
-.wp-logbook .logo img {
-  width: 5rem;
+.wpl_switch:checked + .wpl_switch_label {
+  background: #2271b0;
 }
 
-.wp-logbook-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 15px;
+.wpl_switch:checked + .wpl_switch_label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
 }
 
-.wp-logbook-title a {
-  color: #15af19;
-  text-decoration: none;
+.wpl_switch_label:active:after {
+  width: 15px;
 }
 
-.wp-logbook-title a:hover {
-  color: #128c16;
+.wpl_hr_line {
+  margin-bottom: 2em;
 }
 
-.wp-logbook-title h2 {
-  margin-top: 0;
-  margin-bottom: 0;
+.wpl_log_file_location {
+  margin-top: 2em !important;
 }
 
-.wp-logbook-title p {
-  margin-top: 0;
-  margin-bottom: 0;
+.wpl_field_error {
+  color: red;
 }
 
-.wp-logbook-input-box {
-  line-height: 2rem;
-}
-
-.wp-logbook-input-box input {
-  width: 100%;
-}
-
-.wp-logbook-input-box select {
-  max-width: 100%;
-  width: 100%;
-}
-
-.wp-logbook-card {
-  border-radius: 5px;
-  background-color: #fff;
-  padding: 4rem;
-  margin-top: 3rem;
-}
-
-p.submit {
-  text-align: right;
-}
-
-p.submit input {
-  background-color: #15af19 !important;
-  border-color: #15af19 !important;
+.wpl_debug_status {
+  margin-left: 10px;
+  font-weight: 600;
 }
