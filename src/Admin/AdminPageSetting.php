@@ -270,18 +270,23 @@ class AdminPageSetting
 
     function add_custom_cron_interval($schedules)
     {
+        $get_interval = get_option("wp_logbook_log_schedule");
+        $interval = !empty($get_interval) ? absint($get_interval) : 900;
+
         $schedules['wpl_custom_interval'] = array(
-            'interval' => get_option("wp_logbook_log_schedule"),
-            'display'  => esc_html__('Wpl custom interval'),
+            'interval' => $interval,
+            'display'  => esc_html__('WP Logbook Schedule'),
         );
         return $schedules;
     }
 
     function log_schedule()
     {
-        wp_unschedule_event(wp_next_scheduled('schedule_log_check_hook'), 'schedule_log_check_hook');
-        if (!wp_next_scheduled("schedule_log_check_hook")) {
-            wp_schedule_event(time(), "wpl_custom_interval", "schedule_log_check_hook");
-        }
+        if (!wp_next_scheduled("schedule_log_check_hook"))
+            wp_schedule_event(
+                time(),
+                "wpl_custom_interval",
+                "schedule_log_check_hook"
+            );
     }
 }

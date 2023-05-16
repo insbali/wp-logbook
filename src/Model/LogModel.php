@@ -19,7 +19,7 @@ class LogModel
     public ?array $stackTrace = null;
     public ?int $code = null;
     public ?string $level = null;
-    public ?string $channel = null;
+    public ?string $channel = "default";
     public ?string $datetime = null;
     public ?array $additional = array();
     public ?ClientModel $client = null;
